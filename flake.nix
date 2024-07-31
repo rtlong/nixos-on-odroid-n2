@@ -14,6 +14,15 @@
       };
 
       sdImage = sdImageSystem.config.system.build.sdImage;
+
+      nixosConfigurations = {
+        odroid = nixpkgs.lib.nixosSystem {
+          specialArgs = {
+            inherit inputs;
+          };
+          modules = [ ./machines/optiplex ];
+        };
+      };
     };
 
 }

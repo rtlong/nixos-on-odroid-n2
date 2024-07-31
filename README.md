@@ -14,6 +14,10 @@ On an aarch64 system (or with aarch64 emulation):
 
     nix-build '<nixos/nixos>' -I nixos-config=./sd-image.nix -A config.system.build.sdImage
 
+With flakes
+
+    nix build '.#sdImage' --extra-experimental-features 'nix-command flakes'
+
 ## First configuration
 
 After flashing the image and booting it up on the ODROID:
@@ -31,4 +35,4 @@ After flashing the image and booting it up on the ODROID:
 
 ## Known Bugs
 
- * Reboots seem not to work. The system shuts down but then it's stuck and does not restart.
+* Reboots seem not to work. The system shuts down but then it's stuck and does not restart.
