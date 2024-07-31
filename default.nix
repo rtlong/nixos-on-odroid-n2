@@ -5,7 +5,7 @@
   ...
 }:
 {
-  imports = [ ./koot-conf ];
+  imports = [ ./kboot-conf ];
   boot.loader.grub.enable = false;
   boot.loader.kboot-conf.enable = true;
   boot.kernelParams = [ "console=ttyAML0,115200n8" ];
