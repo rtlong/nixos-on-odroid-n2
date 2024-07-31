@@ -20,7 +20,10 @@
           specialArgs = {
             inherit inputs;
           };
-          modules = [ ./machines/optiplex ];
+          modules = [
+            /etc/nixos/configuration.nix
+            ./default.nix
+          ];
         };
       };
     };
